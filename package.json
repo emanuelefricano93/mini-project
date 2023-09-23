@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "push-docs": "ng build --configuration production && mv dist/* docs/"
+    "push-docs": "rm -rf docs && mkdir docs && ng build --configuration production && mv dist/mini-project/* docs/"
   },
   "private": true,
   "dependencies": {
