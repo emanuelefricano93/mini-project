@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "push-docs": "ng build --configuration production && mv dist/* docs/"
   },
   "private": true,
   "dependencies": {
