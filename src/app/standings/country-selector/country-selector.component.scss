@@ -1,0 +1,21 @@
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  border-radius: 6px;
+  padding: 0 10px;
+  background: gainsboro;
+  width: fit-content;
+  margin: auto;
+  width: fit-content;
+  margin: auto;
+
+  button {
+    padding: 10px;
+    background-color: inherit;
+    border: none;
+    padding: 10px 20px;
+    min-width: 100px;
+    cursor: pointer;
+  }
+}

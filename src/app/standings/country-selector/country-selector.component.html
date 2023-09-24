@@ -1,0 +1,4 @@
+<div class="buttons-container">
+  <button *ngFor="let country of countryList" [id]="country+'Select'" (click)="countrySelected.emit(country)">{{ country }}</button>
+</div>
+
