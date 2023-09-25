@@ -107,7 +107,7 @@ export default class FootballService{
     } else {
       insertCacheTime = insertTime;
     }
-    return new Date().getMilliseconds() - insertCacheTime.getMilliseconds() > 30 * 60 *1000;
+    return (new Date().getTime() - insertCacheTime.getTime()) > 30 * 60 *1000;
   }
 
 }
