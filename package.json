@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "generate-docs": "rm -rf docs && mkdir docs && ng build --configuration production --base-href /mini-project/ && mv dist/mini-project/* docs/"
+    "generate-docs": "rm -rf docs && mkdir docs && ng build --configuration production --base-href /mini-project/ && mv dist/mini-project/* docs/ && cp docs/index.html docs/404.html"
   },
   "private": true,
   "dependencies": {
