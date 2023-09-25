@@ -1,0 +1,46 @@
+.standing-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  table,th, td {
+    border:1px solid lightgray;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  td {
+    padding: 0 2px;
+    &.rank{
+      width: 50px;
+    }
+
+    &.logo {
+      width: 50px;
+    }
+
+    &.name {
+      cursor: pointer;
+      width: 150px;
+    }
+
+    &.win,&.lose,&.draw {
+      width: 50px;
+    }
+
+    &.goalsDiff {
+      width: 150px;
+    }
+
+    &.points {
+      width: 50px;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+

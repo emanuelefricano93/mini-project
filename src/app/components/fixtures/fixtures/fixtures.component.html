@@ -1,0 +1,11 @@
+<div class="fixtures-container">
+  <div *ngIf="fixtures.length" class="fixtures-details">
+    <app-fixture-detail *ngFor="let fixture of fixtures" [fixture]="fixture"></app-fixture-detail>
+  </div>
+  <div class="button-container">
+    <button [routerLink]="'/home'">Back</button>
+  </div>
+</div>
+
+
+

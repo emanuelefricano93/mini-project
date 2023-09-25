@@ -1,14 +1,14 @@
 .buttons-container {
   display: flex;
   justify-content: center;
-  border: solid;
+  border: solid 1px;
   border-radius: 6px;
   padding: 0 10px;
   background: gainsboro;
   width: fit-content;
   margin: auto;
   width: fit-content;
-  margin: auto;
+  margin: 20px auto;
 
   button {
     padding: 10px;
@@ -17,5 +17,10 @@
     padding: 10px 20px;
     min-width: 100px;
     cursor: pointer;
+
+    &.selected {
+      color: blue;
+      text-decoration: underline;
+    }
   }
 }

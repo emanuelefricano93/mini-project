@@ -1,0 +1,7 @@
+<div class="buttons-container">
+  <button [ngClass]="{'selected': currentCountry === country.value}"
+    *ngFor="let country of countryList" [id]="country.id"
+    (click)="onCountrySelected(country.value)">{{ country.name }}
+  </button>
+</div>
+

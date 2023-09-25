@@ -1,0 +1,7 @@
+<div class="fixture-container">
+  <img [src]="fixture?.teams?.home?.logo">
+  <p class="home name">{{fixture?.teams?.home?.name}}</p>
+  <p class="goals">{{fixture?.goals?.home + ' - ' +fixture?.goals?.away}}</p>
+  <p class="away name">{{fixture?.teams?.away?.name}}</p>
+  <img [src]="fixture?.teams?.away?.logo">
+</div>

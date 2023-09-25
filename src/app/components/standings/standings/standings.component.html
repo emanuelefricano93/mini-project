@@ -1,0 +1,33 @@
+<app-country-selector (countrySelected)="onCountrySelected($event)"></app-country-selector>
+
+<div class="standing-container">
+
+  <table *ngIf="standings.length; else noStandings">
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Name</th>
+      <th>Games</th>
+      <th>W</th>
+      <th>L</th>
+      <th>D</th>
+      <th>Goal Difference</th>
+      <th>Points</th>
+    </tr>
+    <tr *ngFor="let standing of standings">
+      <td class="rank">{{standing.rank}}</td>
+      <td class="logo"><img [src]="standing.team.logo"></td>
+      <td class="name" [routerLink]="'/results/' + standing.team.id">{{standing.team.name}}</td>
+      <td class="games">{{standing.all.played}}</td>
+      <td class="win">{{standing.all.win}}</td>
+      <td class="lose">{{standing.all.lose}}</td>
+      <td class="draw">{{standing.all.draw}}</td>
+      <td class="goalsDiff">{{standing.goalsDiff}}</td>
+      <td class="points">{{standing.points}}</td>
+    </tr>
+  </table>
+</div>
+
+<ng-template #noStandings>
+  <p>Please select a country for the standings...</p>
+</ng-template>
