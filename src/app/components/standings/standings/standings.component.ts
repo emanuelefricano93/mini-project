@@ -13,14 +13,14 @@ export class StandingsComponent implements OnDestroy {
 
   private footballService = inject(FootballService);
   standings: Standing[] = [];
-  subscription: Subscription | undefined;
+  subscriptions: Subscription[] = [];
 
 
   onCountrySelected(countryKey: Uppercase<string>) {
-    this.subscription = this.footballService.getStandings(countryKey).subscribe(res => this.standings = res);
+    this.subscriptions.push(this.footballService.getStandings(countryKey).subscribe(res => this.standings = res));
   }
 
   ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
+    this.subscriptions.forEach(s => s.unsubscribe());
   }
 }
